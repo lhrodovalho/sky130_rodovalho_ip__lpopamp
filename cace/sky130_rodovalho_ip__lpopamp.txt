@@ -1,0 +1,247 @@
+#--------------------------------------------------------------
+# CACE circuit characterization file
+#--------------------------------------------------------------
+
+name:		sky130_rodovalho_ip__lpopamp
+description:	Rail-to-rail low power operational amplifier
+commit:		N/A
+PDK:		sky130A
+
+cace_format:	4.0
+
+authorship {
+	designer:	Luis Henrique Rodovalho
+	company:	-
+	creation_date:	March 8, 2024
+	license:	Apache 2.0
+}
+
+# Paths to various files
+
+paths {
+	root:		..
+	documentation:	doc
+	schematic:	xschem
+	magic:		mag
+	layout:		gds
+	netlist:	netlist
+	testbench:	cace
+	simulation:	ngspice
+	plots:		plots
+	logs:		ngspice/log
+}
+
+# Project dependencies
+
+dependencies {
+}
+
+# Pin names and descriptions
+
+pins {
+	name:		ena
+	description:	Enable input (active low)
+	type:		digital
+	direction:	input
+	Vmin:		vss - 0.3
+	Vmax:		vdd + 0.3
+	note:		May be 1.8V or 3.3V signal
+
+ 	+
+	name:		inm
+	description:	amplifier voltage negative input
+	type:		signal
+	direction:	output
+	Vmin:		vss - 0.3
+	Vmax:		vdd + 0.3
+
+ 	+
+	name:		inp
+	description:	amplifier voltage positive input
+	type:		signal
+	direction:	output
+	Vmin:		vss - 0.3
+	Vmax:		vdd + 0.3
+
+ 	+
+	name:		out
+	description:	amplifier voltage output
+	type:		signal
+	direction:	output
+	Vmin:		vss
+	Vmax:		vdd
+
+ 	+
+	name:		vdd
+	description:	Analog power supply
+	type:		power
+	direction:	inout
+	Vmin:		3.0
+	Vmax:		5.0
+
+ 	+
+	name:		vss
+	description:	Analog ground
+	type:		ground
+	direction:	inout
+	Vmin:		-0.3
+	Vmax:		0.3
+}
+
+# Default values for electrical parameter measurement conditions
+# if not otherwise specified
+
+default_conditions {
+	name:		Vvdd
+	description:	Analog power supply voltage
+	display:	vdd
+	unit:		V
+	minimum:	3.0
+	typical:	3.3
+	maximum:	5.5
+
+	+
+	name:		Vvss
+	description:	Analog ground
+	display:	vss
+	unit:		V
+	typical:	0
+
+	+
+	name:		Vdvdd
+	description:	Digital power supply voltage
+	display:	dvdd
+	unit:		V
+	typical:	1.8
+	note:		Reference voltage for the enable input
+
+	+
+	name:		Rout
+	description:	Output load resistance
+	display:	RLoad
+	unit:		k{ohms}
+	minimum:	5
+
+	+
+	name:		Cout
+	description:	Output load capacitance
+	display:	CLoad
+	unit:		pF
+	maximum:	30
+
+	+
+	name:		ena
+	description:	Amplifier enable
+	display:	ena
+	typical:	1
+
+	+
+	name:		Vcm
+	description:	Common-mode input voltage
+	display:	Vcm
+	minimum:	avss+0.1
+	typical:	1.65
+	maximum:	avdd-0.1
+
+	+
+	name:		temperature
+	description:	Ambient temperature
+	display:	Temp
+	unit:		{degrees}C
+	minimum:	-40
+	typical:	25
+	maximum:	85
+
+	+
+	name:		corner
+	description:	Process corner
+	display:	Corner
+	minimum:	ss
+	typical:	tt
+	maximum:	ff
+
+	+
+	name:		iterations
+	description:	Iterations to run
+	display:	Iterations
+	minimum:	1
+	maximum:	10
+	step:		linear
+	stepsize:	1
+}
+
+# List of electrical parameters to be measured and their specified limits
+
+electrical_parameters {
+	name:		idd
+	description:	Current draw through analog supply, amplifier enabled, no load
+	display:	Idd
+	unit: 		{micro}A
+	spec {
+		minimum:	any
+		typical:	any
+		maximum:	300	fail
+	}
+	simulate {
+		tool:		ngspice
+		template:	lpopmap_ac_tb.spice
+		format:		ascii .data null result
+	}
+	conditions {
+		name: Vvdd
+		typical: 3.3
+
+		+
+		name: Vcm
+		maximum: 3.3
+		typical: 1.65
+		minimum: 0.0
+
+		+
+		name: temperature
+		typical: 25
+
+		+
+		name: corner
+		typical: tt
+	}
+}
+
+# List of physical parameters to be measured and their specified limits
+
+physical_parameters {
+	name:		area
+	status:		skip
+	description:	Total circuit layout area
+	display:	area
+	unit: 		{micro}m{squared}
+	spec {
+		maximum:	50000	fail
+	}
+	evaluate {
+		tool:		cace_area
+	}
+
+	+
+	name:		LVS_errors
+	description:	LVS errors
+	display:	LVS errors
+	spec {
+		maximum:	0	fail
+	}
+	evaluate {
+		tool:		cace_lvs run_project_lvs.tcl
+	}
+
+	+
+	name:		DRC_errors
+	status:		skip
+	description:	DRC errors
+	display:	DRC errors
+	spec {
+		maximum:	0	fail
+	}
+	evaluate {
+		tool:		cace_drc
+	}
+}
