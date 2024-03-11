@@ -143,6 +143,7 @@ C {devices/code_shown.sym} 1000 -1010 0 0 {name=control only_toplevel=false valu
 
   plot av cmrr psrr
   plot ph
+  print idd
 .endc
 "}
 C {devices/code_shown.sym} 780 -1010 0 0 {name=params only_toplevel=false value="

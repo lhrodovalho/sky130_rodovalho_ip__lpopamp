@@ -1,4 +1,4 @@
-**.subckt tb_lpopamp_open_dc
+**.subckt tb_lpopamp_open_dc_typ
 xdut im ip out avdd avss en enb ibias lpopamp
 v_avss GND avss xavss
 v_avdd avdd avss dc {xavdd} 
