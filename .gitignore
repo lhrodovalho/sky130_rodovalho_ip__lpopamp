@@ -1,0 +1,15 @@
+cace/*.spice
+cace/xschemrc
+cace/sky130_ef_ip__instramp_out.txt
+cace/sky130_ef_ip__instramp.sym
+ngspice/*
+netlist/*
+spice/*
+plots/*
+xschem/xschemrc
+xschem/*.spice
+mag/*.ext
+mag/*.res.ext
+mag/*.nodes
+mag/*.sim
+.spiceinit

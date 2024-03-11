@@ -1,29 +1,28 @@
-#--------------------------------------------------------------
-# CACE circuit characterization file
-#--------------------------------------------------------------
+#---------------------------------------------------
+# CACE format 4.0 characterization file test.txt
+#---------------------------------------------------
 
 name:		sky130_rodovalho_ip__lpopamp
 description:	Rail-to-rail low power operational amplifier
 commit:		N/A
 PDK:		sky130A
-
 cace_format:	4.0
-
 authorship {
 	designer:	Luis Henrique Rodovalho
 	company:	-
 	creation_date:	March 8, 2024
+	modification_date:	March 11, 2024 at 07:38pm
 	license:	Apache 2.0
 }
 
 # Paths to various files
 
 paths {
-	root:		..
+	root:		/home/rodovalho/git/sky130_rodovalho_ip__lpopamp
 	documentation:	doc
 	schematic:	xschem
-	magic:		mag
 	layout:		gds
+	magic:		mag
 	netlist:	netlist
 	testbench:	cace
 	simulation:	ngspice
@@ -47,7 +46,7 @@ pins {
 	Vmax:		vdd + 0.3
 	note:		May be 1.8V or 3.3V signal
 
- 	+
+	+
 	name:		inm
 	description:	amplifier voltage negative input
 	type:		signal
@@ -55,7 +54,7 @@ pins {
 	Vmin:		vss - 0.3
 	Vmax:		vdd + 0.3
 
- 	+
+	+
 	name:		inp
 	description:	amplifier voltage positive input
 	type:		signal
@@ -63,7 +62,7 @@ pins {
 	Vmin:		vss - 0.3
 	Vmax:		vdd + 0.3
 
- 	+
+	+
 	name:		out
 	description:	amplifier voltage output
 	type:		signal
@@ -71,7 +70,7 @@ pins {
 	Vmin:		vss
 	Vmax:		vdd
 
- 	+
+	+
 	name:		vdd
 	description:	Analog power supply
 	type:		power
@@ -79,7 +78,7 @@ pins {
 	Vmin:		3.0
 	Vmax:		5.0
 
- 	+
+	+
 	name:		vss
 	description:	Analog ground
 	type:		ground
@@ -176,11 +175,11 @@ electrical_parameters {
 	name:		idd
 	description:	Current draw through analog supply, amplifier enabled, no load
 	display:	Idd
-	unit: 		{micro}A
+	unit:		{micro}A
 	spec {
 		minimum:	any
 		typical:	any
-		maximum:	300	fail
+		maximum:	300 fail
 	}
 	simulate {
 		tool:		ngspice
@@ -188,15 +187,15 @@ electrical_parameters {
 		format:		ascii .data null result
 	}
 	conditions {
-		name: xavdd
-		typical: 3.3
+		name:		xavdd
+		typical:	3.3
 
 		+
-		name: temperature
-		typical: 25
+		name:		temperature
+		typical:	25
 
 		+
-		name: corner
-		typical: tt
+		name:		corner
+		typical:	tt
 	}
 }
