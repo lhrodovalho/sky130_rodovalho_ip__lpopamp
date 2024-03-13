@@ -1,0 +1,51 @@
+v {xschem version=2.9.9 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @@im @@ip @@o @@avdd @@avss @@en @@enb @@ibias @symname"
+template="name=X1"}
+V {}
+S {}
+E {}
+L 4 20 -300 20 -160 {}
+L 4 20 -160 160 -230 {}
+L 4 20 -300 160 -230 {}
+L 4 40 -200 60 -200 {}
+L 4 50 -210 50 -190 {}
+L 4 40 -260 60 -260 {}
+L 4 0 -200 20 -200 {}
+L 4 0 -260 20 -260 {}
+L 4 160 -230 180 -230 {}
+L 4 0 0 180 0 {}
+L 4 0 -320 180 -320 {}
+L 4 0 -320 0 0 {}
+L 4 180 -320 180 0 {}
+B 5 -2.5 -202.5 2.5 -197.5 {name=ip
+dir=inout
+sim_pinnumber=1}
+B 5 -2.5 -262.5 2.5 -257.5 {name=im
+dir=inout
+sim_pinnumber=0}
+B 5 177.5 -232.5 182.5 -227.5 {name=o
+dir=inout
+sim_pinnumber=2}
+B 5 -2.5 -62.5 2.5 -57.5 {name=enb
+dir=inout
+sim_pinnumber=6}
+B 5 -2.5 -82.5 2.5 -77.5 {name=en
+dir=inout
+sim_pinnumber=5}
+B 5 -2.5 -22.5 2.5 -17.5 {name=ibias
+dir=inout
+sim_pinnumber=7}
+B 5 -2.5 -122.5 2.5 -117.5 {name=avss
+dir=inout
+sim_pinnumber=4}
+B 5 -2.5 -142.5 2.5 -137.5 {name=avdd
+dir=inout
+sim_pinnumber=3}
+T {@name} 60 -160 2 1 0.2 0.2 {}
+T {en} 10 -90 0 0 0.2 0.2 {}
+T {enb} 10 -70 0 0 0.2 0.2 {}
+T {ibias} 10 -30 0 0 0.2 0.2 {}
+T {avdd} 10 -150 0 0 0.2 0.2 {}
+T {avss} 10 -130 0 0 0.2 0.2 {}

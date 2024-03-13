@@ -1,4 +1,6 @@
-**.subckt tb_lpopamp_open_ac_typ
+* num: #num corner: #corner vdd: #vdd temp: #temp
+
+**.subckt tb_lpopamp_open_ac
 Xdut im_ ip out avdd avss en enb ibias lpopamp
 v_avss GND avss xavss
 v_avdd avdd avss dc {xavdd} ac {xavdd_ac} 
@@ -15,9 +17,9 @@ v_ip ip avss dc {xavdd/2}
 
 
 * Include SkyWater sky130 device models
-.lib /usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.lib /usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice #corner
 .param mc_mm_switch=0
-.temp 25
+.temp #temp
 
 
 
@@ -65,14 +67,20 @@ v_ip ip avss dc {xavdd/2}
   plot av cmrr psrr
   plot ph
   print idd
+
+  echo "gbw,pm,av0p1hz,cmrr0p1hz,psrr0p1hz,idd" > ./meas/tb_lpopamp_open_ac.meas#num
+  echo "$&gbw,$&pm,$&av0p1hz,$&cmrr0p1hz,$&psrr0p1hz,$&idd" >> ./meas/tb_lpopamp_open_ac.meas#num
+
+  wrdata ./data/tb_lpopamp_open_ac.dat#num av ph cmrr psrr
+
 .endc
 
 
 
 
-.param xavdd  = 3.3
+.param xavdd  = #vdd
 .param xavss  = 0
-.param xcm    = 1.65
+.param xcm    = {#vdd/2}
 .param xvin   = 0
 .param xvout  = 0
 

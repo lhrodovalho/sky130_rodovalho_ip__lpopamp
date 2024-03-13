@@ -71,5 +71,5 @@ value=1
 m=1}
 C {devices/lab_pin.sym} 360 -350 0 0 {name=lxp sig_type=std_logic lab=xp}
 C {devices/lab_pin.sym} 360 -230 0 0 {name=lxn sig_type=std_logic lab=xn}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 170 -420 1 0 {name=Cp model=cap_mim_m3_1 W=90 L=90 MF=1 spiceprefix=X}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 170 -300 1 0 {name=Cn model=cap_mim_m3_1 W=90 L=90 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 170 -420 1 0 {name=Cp model=cap_mim_m3_1 W=90 L=60 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 170 -300 1 0 {name=Cn model=cap_mim_m3_1 W=90 L=60 MF=1 spiceprefix=X}

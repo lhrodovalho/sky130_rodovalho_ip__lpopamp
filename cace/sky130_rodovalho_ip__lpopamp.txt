@@ -184,7 +184,7 @@ electrical_parameters {
 	}
 	simulate {
 		tool:		ngspice
-		template:	tb_lpopamp_open_ac.spice
+		template:	tb_lpopamp_open_op.spice
 		format:		ascii .data null result
 	}
 	conditions {

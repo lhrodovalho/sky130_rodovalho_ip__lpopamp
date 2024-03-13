@@ -1,4 +1,6 @@
-**.subckt tb_lpopamp_open_ac_typ
+* num: 0 corner: tt vdd: 3.3 temp: 25
+
+**.subckt tb_lpopamp_open_ac
 Xdut im_ ip out avdd avss en enb ibias lpopamp
 v_avss GND avss xavss
 v_avdd avdd avss dc {xavdd} ac {xavdd_ac} 
@@ -65,6 +67,12 @@ v_ip ip avss dc {xavdd/2}
   plot av cmrr psrr
   plot ph
   print idd
+
+  echo "gbw,pm,av0p1hz,cmrr0p1hz,psrr0p1hz,idd" > ./meas/tb_lpopamp_open_ac.meas0
+  echo "$&gbw,$&pm,$&av0p1hz,$&cmrr0p1hz,$&psrr0p1hz,$&idd" >> ./meas/tb_lpopamp_open_ac.meas0
+
+  wrdata ./data/tb_lpopamp_open_ac.dat0 av ph cmrr psrr
+
 .endc
 
 
@@ -72,7 +80,7 @@ v_ip ip avss dc {xavdd/2}
 
 .param xavdd  = 3.3
 .param xavss  = 0
-.param xcm    = 1.65
+.param xcm    = {3.3/2}
 .param xvin   = 0
 .param xvout  = 0
 
@@ -456,3 +464,4 @@ xl D G S B n1_1
 .GLOBAL GND
 ** flattened .save nodes
 .end
+
