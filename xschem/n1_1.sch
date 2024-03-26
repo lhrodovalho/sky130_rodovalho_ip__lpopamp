@@ -22,7 +22,7 @@ C {devices/iopin.sym} 150 0 0 0 {name=p1 lab=D}
 C {devices/iopin.sym} 150 40 0 0 {name=p2 lab=G}
 C {devices/iopin.sym} 150 80 0 0 {name=p3 lab=S}
 C {devices/iopin.sym} 150 120 0 0 {name=p4 lab=B}
-C {sky130_fd_pr/nfet_g5v0d10v5.sym} -20 0 0 0 {name=MD[1:0]
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} -20 0 0 0 {name=MD[3:0]
 L=1.0
 W=7
 nf=1
@@ -36,7 +36,7 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_g5v0d10v5.sym} -20 120 0 0 {name=MS[1:0]
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} -20 120 0 0 {name=MS[3:0]
 L=1.0
 W=7
 nf=1
@@ -50,5 +50,5 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 80 60 0 1 {name=l5 sig_type=std_logic lab=X[1:0]}
+C {devices/lab_pin.sym} 80 60 0 1 {name=l5 sig_type=std_logic lab=X[3:0]}
 C {devices/lab_pin.sym} 80 120 0 1 {name=l6 sig_type=std_logic lab=B}

@@ -157,10 +157,10 @@ N 1080 -120 1320 -120 { lab=avss}
 N 1240 -540 1400 -540 { lab=znm}
 N 1240 -730 1240 -540 { lab=znm}
 N 1400 -570 1400 -540 { lab=znm}
-N 1240 -820 1240 -790 { lab=zpp}
-N 1240 -820 1400 -820 { lab=zpp}
-N 1400 -820 1400 -630 { lab=zpp}
-N 1320 -1010 1320 -820 { lab=zpp}
+N 1240 -820 1240 -790 { lab=zpm}
+N 1240 -820 1400 -820 { lab=zpm}
+N 1400 -820 1400 -630 { lab=zpm}
+N 1320 -1010 1320 -820 { lab=zpm}
 N 1320 -540 1320 -350 { lab=znm}
 N 1140 -160 1260 -160 { lab=znp}
 N 1080 -1240 1320 -1240 { lab=avdd}
@@ -170,7 +170,7 @@ N 1340 -120 1520 -120 { lab=avss}
 N 1620 -160 1640 -160 { lab=znm}
 N 1310 -420 1310 -410 { lab=znm}
 N 1310 -410 1320 -410 { lab=znm}
-N 1620 -1200 1640 -1200 { lab=zpp}
+N 1620 -1200 1640 -1200 { lab=zpm}
 N 620 -1140 840 -1140 { lab=ypm}
 N 620 -1100 680 -1100 { lab=ypp}
 N 620 -220 840 -220 { lab=ynm}
@@ -184,8 +184,8 @@ N 620 -380 1140 -380 { lab=znp}
 N 1090 -380 1090 -370 { lab=znp}
 N 1080 -370 1090 -370 { lab=znp}
 N 620 -980 1140 -980 { lab=zpp}
-N 1310 -950 1320 -950 { lab=zpp}
-N 1310 -950 1310 -940 { lab=zpp}
+N 1310 -950 1320 -950 { lab=zpm}
+N 1310 -950 1310 -940 { lab=zpm}
 N 1090 -990 1090 -980 { lab=zpp}
 N 1080 -990 1090 -990 { lab=zpp}
 N 280 -760 300 -760 { lab=bna}
@@ -261,11 +261,11 @@ N 1520 -1200 1540 -1200 { lab=avdd}
 N 1520 -1240 1520 -1230 { lab=avdd}
 N 1520 -1240 1540 -1240 { lab=avdd}
 N 1340 -1240 1520 -1240 { lab=avdd}
-N 1520 -1170 1520 -1140 { lab=zpp}
-N 1520 -1140 1620 -1140 { lab=zpp}
-N 1620 -1200 1620 -1140 { lab=zpp}
-N 1620 -1140 1620 -940 { lab=zpp}
-N 620 -940 1620 -940 { lab=zpp}
+N 1520 -1170 1520 -1140 { lab=zpm}
+N 1520 -1140 1620 -1140 { lab=zpm}
+N 1620 -1200 1620 -1140 { lab=zpm}
+N 1620 -1140 1620 -940 { lab=zpm}
+N 620 -940 1620 -940 { lab=zpm}
 N 1620 -220 1620 -160 { lab=znm}
 N 1620 -420 1620 -220 { lab=znm}
 C {devices/title.sym} 160 -40 0 0 {name=l6 author="Luis Henrique Rodovalho"}
@@ -274,9 +274,9 @@ C {devices/iopin.sym} 50 -640 2 1 {name=pavss lab=avss}
 C {devices/iopin.sym} 50 -780 2 1 {name=pip lab=ip}
 C {devices/iopin.sym} 50 -750 2 1 {name=pim lab=im}
 C {devices/iopin.sym} 50 -720 2 1 {name=po lab=o}
-C {n2_4.sym} 260 -1000 0 1 {name=x00b[1:0]}
+C {n8_1.sym} 260 -1000 0 1 {name=x00b[1:0]}
 C {n1_4.sym} 220 -160 0 0 {name=x02c[1:0]}
-C {p2_4.sym} 260 -360 0 1 {name=x02b[1:0]}
+C {p8_1.sym} 260 -360 0 1 {name=x02b[1:0]}
 C {p1_4.sym} 260 -600 0 1 {name=x02a[1:0]}
 C {devices/lab_pin.sym} 320 -1060 2 0 {name=l10 sig_type=std_logic lab=bnb}
 C {devices/lab_pin.sym} 460 -820 2 0 {name=l11 sig_type=std_logic lab=bna}
@@ -318,9 +318,9 @@ C {p3_1.sym} 1100 -1040 0 1 {name=x12b[1:0]}
 C {p1_4.sym} 1100 -1200 0 1 {name=x12a[3:0]}
 C {p3_1.sym} 1300 -1040 0 0 {name=x14b[1:0]}
 C {p1_4.sym} 1300 -1200 0 0 {name=x14a[3:0]}
-C {p1_4.sym} 1220 -760 0 0 {name=x14c[1:0]}
+C {p4_1.sym} 1220 -760 0 0 {name=x14c[1:0]}
 C {devices/lab_pin.sym} 1180 -760 2 1 {name=l31 sig_type=std_logic lab=bpb}
-C {n1_4.sym} 1380 -600 0 0 {name=x14d[1:0]}
+C {n4_1.sym} 1380 -600 0 0 {name=x14d[1:0]}
 C {devices/lab_pin.sym} 1340 -600 2 1 {name=l32 sig_type=std_logic lab=bnb}
 C {devices/lab_pin.sym} 1260 -760 2 0 {name=lavdd4 sig_type=std_logic lab=avdd}
 C {devices/lab_pin.sym} 1420 -600 2 0 {name=lavss4 sig_type=std_logic lab=avss}
