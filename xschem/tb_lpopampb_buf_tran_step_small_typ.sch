@@ -64,7 +64,7 @@ C {devices/vsource.sym} 240 -150 0 0 {name=v_avdd value="dc \{xavdd\} ac \{xavdd
 C {devices/lab_pin.sym} 320 -200 0 1 {name=lavdd0 sig_type=std_logic lab=avdd}
 C {devices/lab_pin.sym} 320 -100 0 1 {name=lavss0 sig_type=std_logic lab=avss}
 C {devices/gnd.sym} 160 -180 0 0 {name=l1 lab=GND}
-C {devices/vsource.sym} 1040 -390 0 0 {name=v_in value="dc \{xvin\} pulse(\{xvlo\} \{xvhi\} \{xtdel\} \{xtr\} \{xtr\} \{xpw\} \{xper\})"}
+C {devices/vsource.sym} 1040 -390 0 0 {name=v_in value="pulse(\{xvlo\} \{xvhi\} \{xtdel\} \{xtr\} \{xtr\} \{xpw\} \{xper\})"}
 C {devices/vsource.sym} 480 -150 0 0 {name=v_en value=\{xen*xavdd\}}
 C {devices/lab_pin.sym} 560 -200 0 1 {name=len0 sig_type=std_logic lab=en}
 C {devices/vsource.sym} 640 -150 0 0 {name=v_enb value=\{(1-xen)*xavdd\}}
@@ -92,12 +92,15 @@ C {devices/code_shown.sym} 80 -1030 0 0 {name=header only_toplevel=false value="
 "
 }
 C {devices/code_shown.sym} 960 -1030 0 0 {name=control only_toplevel=false value="
-.option gmin=1E-12
-.option rshunt=1E12
+.option gmin   = 1e-10
+.option abstol = 1e-10
+.option reltol = 0.003
+.option cshunt = 1e-15
 .option method=Gear
-.param xtstart = 0
+.param xtstart = \{0\}
 .param xtend   = \{xper\}
 .param xtstep  = \{xper/1000\}
+.ic v(avdd) = \{xavdd\}
 .tran \{xtstep\} \{xtend\} \{xtstart\}
 .control
   run

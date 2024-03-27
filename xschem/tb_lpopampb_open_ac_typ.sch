@@ -110,21 +110,21 @@ C {devices/code_shown.sym} 1000 -1010 0 0 {name=control only_toplevel=false valu
   alter v_avdd ac=0
 
   op
-  ac dec 100 10m 10G
+  ac dec 10 10m 10G
 
   * common-mode input
   alter v_ip   ac=1
   alter v_im   ac=1
   alter v_avdd ac=0
 
-  ac dec 100 10m 10G
+  ac dec 10 10m 10G
 
   * power supply
   alter v_ip   ac=0
   alter v_im   ac=0
   alter v_avdd ac=1
 
-  ac dec 100 10m 10G
+  ac dec 10 10m 10G
 
   let idd = op.i(v_avdd) 
   let av = db(ac1.out)
