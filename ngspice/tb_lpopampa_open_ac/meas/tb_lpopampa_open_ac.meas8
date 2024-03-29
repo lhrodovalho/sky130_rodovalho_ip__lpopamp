@@ -1,2 +1,2 @@
-gbw,pm,av0p1hz,cmrr0p1hz,psrr0p1hz,idd,vos
-1.3582E+06,63.4082,109.494,117.431,70.6994,-0.000281448,3.3306E-05
+num,corner,vdd,temp,gbw,pm,av0p1hz,cmrr0p1hz,psrr0p1hz,idd,vos
+8,ff,3.0,85,1.32407E+06,63.0093,109.156,120.035,69.9688,-0.000282879,9.83012E-06

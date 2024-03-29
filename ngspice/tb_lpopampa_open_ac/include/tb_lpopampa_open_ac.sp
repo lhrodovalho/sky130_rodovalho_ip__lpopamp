@@ -1,8 +1,7 @@
 * num: #num corner: #corner vdd: #vdd temp: #temp
 
 * Include SkyWater sky130 device models
-.lib /usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice #corner
-.param mc_mm_switch=0
+.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice #corner
 .temp #temp
 
 .include ../../netlists/lpopampa.spice
@@ -46,8 +45,8 @@ v_im im avss dc {xavdd/2}
 v_ip ip avss dc {xavdd/2} 
 
 * Simulation control
-.option gmin=1e-12
-.option rshunt=1e12
+.save v(ip) v(out)
+.save i(v_avdd)
 .control
   * differential input
   alter v_ip   ac=0
@@ -91,8 +90,8 @@ v_ip ip avss dc {xavdd/2}
   plot ph
   print idd vos
 
-  echo "gbw,pm,av0p1hz,cmrr0p1hz,psrr0p1hz,idd,vos" > ./meas/tb_lpopampa_open_ac.meas#num
-  echo "$&gbw,$&pm,$&av0p1hz,$&cmrr0p1hz,$&psrr0p1hz,$&idd,$&vos" >> ./meas/tb_lpopampa_open_ac.meas#num
+  echo "num,corner,vdd,temp,gbw,pm,av0p1hz,cmrr0p1hz,psrr0p1hz,idd,vos" > ./meas/tb_lpopampa_open_ac.meas#num
+  echo "#num,#corner,#vdd,#temp,$&gbw,$&pm,$&av0p1hz,$&cmrr0p1hz,$&psrr0p1hz,$&idd,$&vos" >> ./meas/tb_lpopampa_open_ac.meas#num
 
   wrdata ./data/tb_lpopampa_open_ac_av.dat#num av
   wrdata ./data/tb_lpopampa_open_ac_ph.dat#num ph
@@ -100,3 +99,6 @@ v_ip ip avss dc {xavdd/2}
   wrdata ./data/tb_lpopampa_open_ac_psrr.dat#num psrr
 
 .endc
+
+.GLOBAL GND 
+.end 

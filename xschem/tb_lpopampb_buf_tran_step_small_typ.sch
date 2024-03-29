@@ -124,7 +124,7 @@ C {devices/code_shown.sym} 640 -1030 0 0 {name=params only_toplevel=false value=
 .param xcl    = 30p
 .param xrl    = 5k
 
-.param xamp  = \{10m\}
+.param xamp  = \{1\}
 .param xvlo  = \{xavdd/2-xamp/2\}
 .param xvhi  = \{xavdd/2+xamp/2\}
 .param xper  = \{4u\}

@@ -1,15 +1,15 @@
 
 Note: Compatibility modes selected: hs a
 
-Warning: m=xx on .subckt line will override multiplier m hierarchy!
-
 
 Circuit: * num: 8 corner: ff vdd: 3.0 temp: 85
 
 option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
 Doing analysis at TEMP = 85.000000 and TNOM = 27.000000
 
-Note: include: has no value, DC 0 assumed
 Note: Starting dynamic gmin stepping
 Trying gmin =   1.0000E-03 Note: One successful gmin step
 Trying gmin =   1.0000E-04 Note: One successful gmin step
@@ -47,7 +47,6 @@ Note: Dynamic gmin stepping completed
 No. of Data Rows : 1
 Doing analysis at TEMP = 85.000000 and TNOM = 27.000000
 
-Note: include: has no value, DC 0 assumed
 Note: Starting dynamic gmin stepping
 Trying gmin =   1.0000E-03 Note: One successful gmin step
 Trying gmin =   1.0000E-04 Note: One successful gmin step
@@ -85,7 +84,6 @@ Note: Dynamic gmin stepping completed
 No. of Data Rows : 121
 Doing analysis at TEMP = 85.000000 and TNOM = 27.000000
 
-Note: include: has no value, DC 0 assumed
 Note: Starting dynamic gmin stepping
 Trying gmin =   1.0000E-03 Note: One successful gmin step
 Trying gmin =   1.0000E-04 Note: One successful gmin step
@@ -123,7 +121,6 @@ Note: Dynamic gmin stepping completed
 No. of Data Rows : 121
 Doing analysis at TEMP = 85.000000 and TNOM = 27.000000
 
-Note: include: has no value, DC 0 assumed
 Note: Starting dynamic gmin stepping
 Trying gmin =   1.0000E-03 Note: One successful gmin step
 Trying gmin =   1.0000E-04 Note: One successful gmin step
@@ -159,36 +156,35 @@ Trying gmin =   1.0000E-12 Note: One successful gmin step
 Note: Dynamic gmin stepping completed
 
 No. of Data Rows : 121
-av0p1hz             =  1.094943e+02
-gbw                 =  1.358195e+06
-pm180               =  4.300030e+07
-pm                  =  6.340823e+01
-gm                  =  -4.673643e+01
-cmrr0p1hz           =  1.174315e+02
-psrr0p1hz           =  7.069941e+01
+av0p1hz             =  1.091565e+02
+gbw                 =  1.324070e+06
+pm180               =  4.199375e+07
+pm                  =  6.300935e+01
+gm                  =  -4.701967e+01
+cmrr0p1hz           =  1.200353e+02
+psrr0p1hz           =  6.996880e+01
 ERROR: (internal)  This operation is not defined for display type PrinterOnly.
 Can't open viewport for graphics.
 ERROR: (internal)  This operation is not defined for display type PrinterOnly.
 Can't open viewport for graphics.
-idd = -2.81448e-04
-vos = 3.330600e-05
-binary raw file "./out/{num}.raw"
+idd = -2.82879e-04
+vos = 9.830122e-06
+binary raw file "./out/sp8.raw"
 Doing analysis at TEMP = 85.000000 and TNOM = 27.000000
 
-Note: include: has no value, DC 0 assumed
 OP information in rawfile.
 
-Total analysis time (seconds) = 125.906
+Total analysis time (seconds) = 203.239
 
-Total elapsed time (seconds) = 149.594 
+Total elapsed time (seconds) = 222.445 
 
-Total DRAM available = 7841.945 MB.
-DRAM currently available =  692.973 MB.
-Maximum ngspice program size =  932.754 MB.
-Current ngspice program size =  885.352 MB.
+Total DRAM available = 7841.949 MB.
+DRAM currently available =  382.707 MB.
+Maximum ngspice program size = 2426.188 MB.
+Current ngspice program size = 2407.984 MB.
 
-Shared ngspice pages =   11.051 MB.
+Shared ngspice pages =   10.516 MB.
 Text (code) pages =    5.461 MB.
 Stack = 0 bytes.
-Library pages =  912.309 MB.
+Library pages = 2405.742 MB.
 
