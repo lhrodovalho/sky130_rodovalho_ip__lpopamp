@@ -1,0 +1,55 @@
+* num: 16 corner: fs vdd: 5.5 temp: -40
+
+* Include SkyWater sky130 device models
+.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice fs
+.temp -40
+
+.include ../../netlists/lpopamp.rcc.spice
+
+* Simulation parameters
+.param xavdd  = 5.5
+.param xavss  = 0
+.param xen    = 1
+.param xvin   = {5.5/2}
+.param xvout  = {5.5/2}
+
+.param xavdd_ac = 0
+.param xvin_ac  = 1
+.param xvout_ac = 0
+
+.param xibias = 10u
+
+.param xcl    = 30p
+.param xrl    = 1T
+
+* Design under test
+*.subckt lpopamp im o ib vsub avss avdd enb en ip
+Xdut in out ibias avss avss avdd enb en out lpopamp
+v_avss GND avss xavss
+v_avdd avdd avss dc {xavdd} ac {xavdd_ac} 
+v_in in avss dc {xvin} ac {xvin_ac} 
+v_en en avss {xen*xavdd} 
+v_enb enb avss {(1-xen)*xavdd} 
+i_ibias avdd ibias {xen*xibias} 
+CL out avss 'xcl' m=1 
+
+* Simulation control
+.option rshunt = 1e12
+.control
+  noise v(out) v_in dec 10 1 1G
+  let onoise_10k   = noise1.onoise_spectrum[40]
+  let onoise_total = noise2.onoise_total
+  print onoise_10k onoise_total
+
+  plot noise1.onoise_spectrum loglog
+  
+  echo "num,corner,vdd,temp,onoise_10k,onoise_total"         >  ./meas/tb_lpopamp_buf_noise_rcc.meas16
+  echo "16,fs,5.5,-40,$&onoise_10k,$&onoise_total" >> ./meas/tb_lpopamp_buf_noise_rcc.meas16
+
+  wrdata ./data/tb_lpopamp_buf_noise_rcc_onoise.dat16 noise1.frequency noise1.onoise_spectrum
+
+.endc
+
+.GLOBAL GND 
+.end 
+
