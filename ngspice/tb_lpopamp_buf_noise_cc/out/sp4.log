@@ -1,0 +1,70 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: * num: 4 corner: fs vdd: 3.0 temp: -40
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Warning: Model issue on line 0 :
+  .model sky130_fd_pr__res_generic_m4 r tc1=    3.424000000000000e-03      ...
+unrecognized parameter (tref) - ignored
+Doing analysis at TEMP = -40.000000 and TNOM = 27.000000
+
+Note: Starting dynamic gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+Trying gmin =   1.0000E-06 Note: One successful gmin step
+Trying gmin =   3.1623E-07 Note: One successful gmin step
+Trying gmin =   5.6234E-08 Note: One successful gmin step
+Trying gmin =   5.6234E-09 Warning: Further gmin increment
+Trying gmin =   3.1623E-08 Note: One successful gmin step
+Trying gmin =   1.3335E-08 Note: One successful gmin step
+Trying gmin =   5.6234E-09 Warning: Further gmin increment
+Trying gmin =   1.0746E-08 Note: One successful gmin step
+Trying gmin =   7.7737E-09 Note: One successful gmin step
+Trying gmin =   4.7829E-09 Warning: Further gmin increment
+Trying gmin =   6.8848E-09 Warning: Further gmin increment
+Trying gmin =   7.5412E-09 Note: One successful gmin step
+Trying gmin =   7.2055E-09 Note: One successful gmin step
+Trying gmin =   6.7298E-09 Note: One successful gmin step
+Trying gmin =   6.0745E-09 Note: One successful gmin step
+Trying gmin =   5.2091E-09 Note: One successful gmin step
+Trying gmin =   4.1367E-09 Note: One successful gmin step
+Trying gmin =   2.9274E-09 Note: One successful gmin step
+Trying gmin =   1.7427E-09 Note: One successful gmin step
+Trying gmin =   8.0048E-10 Note: One successful gmin step
+Trying gmin =   2.4919E-10 Note: One successful gmin step
+Trying gmin =   4.3281E-11 Note: One successful gmin step
+Trying gmin =   4.3281E-12 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Note: Dynamic gmin stepping completed
+
+No. of Data Rows : 91
+
+No. of Data Rows : 1
+onoise_10k = 2.453536e-08
+onoise_total = 5.862363e-05
+ERROR: (internal)  This operation is not defined for display type PrinterOnly.
+Can't open viewport for graphics.
+binary raw file "./out/sp4.raw"
+Doing analysis at TEMP = -40.000000 and TNOM = 27.000000
+
+
+Total analysis time (seconds) = 96.857
+
+Total elapsed time (seconds) = 143.978 
+
+Total DRAM available = 7841.875 MB.
+DRAM currently available =  389.305 MB.
+Maximum ngspice program size = 2145.195 MB.
+Current ngspice program size = 2123.434 MB.
+
+Shared ngspice pages =   10.660 MB.
+Text (code) pages =    5.461 MB.
+Stack = 0 bytes.
+Library pages = 2124.750 MB.
+

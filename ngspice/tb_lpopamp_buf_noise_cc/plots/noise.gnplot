@@ -1,0 +1,35 @@
+set xlabel 'Frequency (Hz)'
+set ylabel 'IRN (V/sqrt(freq))'
+set logscale x
+set format x "10^{%L}"
+set grid
+set key off
+set term png
+set output 'noise.png'
+set datafile separator ','
+plot \
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv0' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv1' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv2' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv3' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv4' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv5' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv6' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv7' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv8' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv9' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv10' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv11' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv12' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv13' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv14' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv15' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv16' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv17' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv18' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv19' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv20' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv21' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv22' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv23' using 3:4 with lines lt rgb 'blue',\
+'../data/tb_lpopamp_buf_noise_cc_onoise.csv24' using 3:4 with lines lt rgb 'blue',\
