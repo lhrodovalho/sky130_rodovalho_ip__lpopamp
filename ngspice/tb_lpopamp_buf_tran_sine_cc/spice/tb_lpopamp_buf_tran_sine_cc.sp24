@@ -30,7 +30,7 @@
 
 * Design under test
 *.subckt lpopamp im o ib vsub avss avdd enb en ip
-Xdut in out ibias avss avss avdd enb en out lpopamp
+Xdut out out ibias avss avss avdd enb en in lpopamp
 v_avss GND avss xavss
 v_avdd avdd avss dc {xavdd} ac {xavdd_ac} 
 v_in in avss sine({xavdd/2} {xamp/2} {xfreq}) 
