@@ -1,0 +1,239 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: * num: 19 corner: ss vdd: 5.5 temp: 85
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Warning: Model issue on line 0 :
+  .model sky130_fd_pr__res_generic_m4 r tc1=    3.424000000000000e-03      ...
+unrecognized parameter (tref) - ignored
+Doing analysis at TEMP = 85.000000 and TNOM = 27.000000
+
+Note: Starting dynamic gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+Trying gmin =   1.0000E-06 Note: One successful gmin step
+Trying gmin =   1.0000E-07 Note: One successful gmin step
+Trying gmin =   1.0000E-08 Warning: Further gmin increment
+Trying gmin =   5.6234E-08 Note: One successful gmin step
+Trying gmin =   2.3714E-08 Note: One successful gmin step
+Trying gmin =   6.4938E-09 Warning: Further gmin increment
+Trying gmin =   1.7154E-08 Note: One successful gmin step
+Trying gmin =   1.0554E-08 Note: One successful gmin step
+Trying gmin =   5.0937E-09 Warning: Further gmin increment
+Trying gmin =   8.7970E-09 Note: One successful gmin step
+Trying gmin =   6.6940E-09 Warning: Further gmin increment
+Trying gmin =   8.2162E-09 Note: One successful gmin step
+Trying gmin =   7.4161E-09 Note: One successful gmin step
+Trying gmin =   6.3597E-09 Warning: Further gmin increment
+Trying gmin =   7.1366E-09 Note: One successful gmin step
+Trying gmin =   6.7370E-09 Warning: Further gmin increment
+Trying gmin =   7.0345E-09 Note: One successful gmin step
+Trying gmin =   6.8841E-09 Note: One successful gmin step
+Trying gmin =   6.6646E-09 Note: One successful gmin step
+Trying gmin =   6.3483E-09 Note: One successful gmin step
+Trying gmin =   5.9017E-09 Note: One successful gmin step
+Trying gmin =   5.2901E-09 Note: One successful gmin step
+Trying gmin =   4.4894E-09 Warning: Further gmin increment
+Trying gmin =   5.0774E-09 Note: One successful gmin step
+Trying gmin =   4.7744E-09 Warning: Further gmin increment
+Trying gmin =   4.9999E-09 Note: One successful gmin step
+Trying gmin =   4.8859E-09 Note: One successful gmin step
+Trying gmin =   4.7196E-09 Warning: Further gmin increment
+Trying gmin =   4.8438E-09 Note: One successful gmin step
+Trying gmin =   4.7813E-09 Warning: Further gmin increment
+Trying gmin =   4.8281E-09 Note: One successful gmin step
+Trying gmin =   4.8046E-09 Note: One successful gmin step
+Trying gmin =   4.7813E-09 Note: One successful gmin step
+Trying gmin =   4.7465E-09 Note: One successful gmin step
+Trying gmin =   4.6948E-09 Note: One successful gmin step
+Trying gmin =   4.6183E-09 Note: One successful gmin step
+Trying gmin =   4.5059E-09 Note: One successful gmin step
+Trying gmin =   4.3423E-09 Note: One successful gmin step
+Trying gmin =   4.1081E-09 Note: One successful gmin step
+Trying gmin =   3.7803E-09 Note: One successful gmin step
+Trying gmin =   3.3369E-09 Note: One successful gmin step
+Trying gmin =   2.7673E-09 Note: One successful gmin step
+Trying gmin =   2.0900E-09 Note: One successful gmin step
+Trying gmin =   1.3718E-09 Note: One successful gmin step
+Trying gmin =   7.2943E-10 Note: One successful gmin step
+Trying gmin =   2.8283E-10 Note: One successful gmin step
+Trying gmin =   6.8289E-11 Note: One successful gmin step
+Trying gmin =   8.1017E-12 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Note: Dynamic gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+xdut.bpb                               3.35777
+xdut.slice0.bpa_                       4.45973
+avdd                                       5.5
+en                                         5.5
+xdut.slice1.bna_                      0.877224
+avss                                         0
+xdut.znp                              0.863035
+xdut.bpa                               4.45973
+xdut.bnb                               1.80497
+xdut.zpp                               4.50529
+xdut.bna                              0.877224
+xdut.ypp                               5.40078
+xdut.slice0.wp                         4.61398
+xdut.znm                               1.48619
+xdut.zpm                               4.48182
+out                                  0.0510876
+xdut.ypm                               5.40067
+xdut.xn                            7.09999e-06
+xdut.slice1.bpa_                       4.45973
+xdut.slice0.wn                        0.715956
+xdut.ynm                              0.123179
+enb                                          0
+xdut.slice1.wn                        0.715956
+in                                        0.05
+xdut.xp                                1.71737
+xdut.slice0.bna_                      0.877224
+xdut.ynp                              0.121767
+xdut.slice1.wp                         4.61398
+ibias                                  1.80497
+out_                                      2.75
+v_out#branch                      -0.000539782
+v_enb#branch                                 0
+v_en#branch                           -5.5e-12
+v_in#branch                             -5e-14
+v_avdd#branch                     -0.000252372
+v_avss#branch                      5.98182e-08
+
+
+No. of Data Rows : 191
+ERROR: (internal)  This operation is not defined for display type PrinterOnly.
+Can't open viewport for graphics.
+slewp               =  1.713758e-06 targ=  1.196330e-05 trig=  1.024954e-05
+slewm               =  1.804496e-06 targ=  3.342669e-05 trig=  3.162219e-05
+slewrp = 1.493793e+06
+slewrm = 1.418679e+06
+slewr = 1.456236e+06
+binary raw file "../out/sp19.raw"
+Doing analysis at TEMP = 85.000000 and TNOM = 27.000000
+
+No. of Data Columns : 14741  
+Note: Starting dynamic gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+Trying gmin =   1.0000E-06 Note: One successful gmin step
+Trying gmin =   1.0000E-07 Note: One successful gmin step
+Trying gmin =   1.0000E-08 Warning: Further gmin increment
+Trying gmin =   5.6234E-08 Note: One successful gmin step
+Trying gmin =   2.3714E-08 Note: One successful gmin step
+Trying gmin =   6.4938E-09 Warning: Further gmin increment
+Trying gmin =   1.7154E-08 Note: One successful gmin step
+Trying gmin =   1.0554E-08 Note: One successful gmin step
+Trying gmin =   5.0937E-09 Warning: Further gmin increment
+Trying gmin =   8.7970E-09 Note: One successful gmin step
+Trying gmin =   6.6940E-09 Warning: Further gmin increment
+Trying gmin =   8.2162E-09 Note: One successful gmin step
+Trying gmin =   7.4161E-09 Note: One successful gmin step
+Trying gmin =   6.3597E-09 Warning: Further gmin increment
+Trying gmin =   7.1366E-09 Note: One successful gmin step
+Trying gmin =   6.7370E-09 Warning: Further gmin increment
+Trying gmin =   7.0345E-09 Note: One successful gmin step
+Trying gmin =   6.8841E-09 Note: One successful gmin step
+Trying gmin =   6.6646E-09 Note: One successful gmin step
+Trying gmin =   6.3483E-09 Note: One successful gmin step
+Trying gmin =   5.9017E-09 Note: One successful gmin step
+Trying gmin =   5.2901E-09 Note: One successful gmin step
+Trying gmin =   4.4894E-09 Warning: Further gmin increment
+Trying gmin =   5.0774E-09 Note: One successful gmin step
+Trying gmin =   4.7744E-09 Warning: Further gmin increment
+Trying gmin =   4.9999E-09 Note: One successful gmin step
+Trying gmin =   4.8859E-09 Note: One successful gmin step
+Trying gmin =   4.7196E-09 Warning: Further gmin increment
+Trying gmin =   4.8438E-09 Note: One successful gmin step
+Trying gmin =   4.7813E-09 Warning: Further gmin increment
+Trying gmin =   4.8281E-09 Note: One successful gmin step
+Trying gmin =   4.8046E-09 Note: One successful gmin step
+Trying gmin =   4.7813E-09 Note: One successful gmin step
+Trying gmin =   4.7465E-09 Note: One successful gmin step
+Trying gmin =   4.6948E-09 Note: One successful gmin step
+Trying gmin =   4.6183E-09 Note: One successful gmin step
+Trying gmin =   4.5059E-09 Note: One successful gmin step
+Trying gmin =   4.3423E-09 Note: One successful gmin step
+Trying gmin =   4.1081E-09 Note: One successful gmin step
+Trying gmin =   3.7803E-09 Note: One successful gmin step
+Trying gmin =   3.3369E-09 Note: One successful gmin step
+Trying gmin =   2.7673E-09 Note: One successful gmin step
+Trying gmin =   2.0900E-09 Note: One successful gmin step
+Trying gmin =   1.3718E-09 Note: One successful gmin step
+Trying gmin =   7.2943E-10 Note: One successful gmin step
+Trying gmin =   2.8283E-10 Note: One successful gmin step
+Trying gmin =   6.8289E-11 Note: One successful gmin step
+Trying gmin =   8.1017E-12 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Note: Dynamic gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+xdut.bpb                               3.35777
+xdut.slice0.bpa_                       4.45973
+avdd                                       5.5
+en                                         5.5
+xdut.slice1.bna_                      0.877224
+avss                                         0
+xdut.znp                              0.863035
+xdut.bpa                               4.45973
+xdut.bnb                               1.80497
+xdut.zpp                               4.50529
+xdut.bna                              0.877224
+xdut.ypp                               5.40078
+xdut.slice0.wp                         4.61398
+xdut.znm                               1.48619
+xdut.zpm                               4.48182
+out                                  0.0510876
+xdut.ypm                               5.40067
+xdut.xn                            7.09999e-06
+xdut.slice1.bpa_                       4.45973
+xdut.slice0.wn                        0.715956
+xdut.ynm                              0.123179
+enb                                          0
+xdut.slice1.wn                        0.715956
+in                                        0.05
+xdut.xp                                1.71737
+xdut.slice0.bna_                      0.877224
+xdut.ynp                              0.121767
+xdut.slice1.wp                         4.61398
+ibias                                  1.80497
+out_                                      2.75
+v_out#branch                      -0.000539782
+v_enb#branch                                 0
+v_en#branch                           -5.5e-12
+v_in#branch                             -5e-14
+v_avdd#branch                     -0.000252372
+v_avss#branch                      5.98182e-08
+
+
+No. of Data Rows : 191
+
+Total analysis time (seconds) = 411.133
+
+Total elapsed time (seconds) = 464.592 
+
+Total DRAM available = 7841.875 MB.
+DRAM currently available =  234.473 MB.
+Maximum ngspice program size = 2165.766 MB.
+Current ngspice program size = 2146.707 MB.
+
+Shared ngspice pages =   10.656 MB.
+Text (code) pages =    5.461 MB.
+Stack = 0 bytes.
+Library pages = 2145.320 MB.
+
