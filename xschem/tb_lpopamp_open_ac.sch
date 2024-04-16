@@ -8,9 +8,9 @@ N 360 -580 400 -580 { lab=im_}
 N 580 -550 620 -550 { lab=out}
 N 360 -460 400 -460 { lab=avdd}
 N 360 -440 400 -440 { lab=avss}
-N 360 -400 400 -400 { lab=en}
-N 360 -380 400 -380 { lab=enb}
-N 360 -340 400 -340 { lab=ibias}
+N 360 -380 400 -380 { lab=en}
+N 360 -360 400 -360 { lab=enb}
+N 360 -320 400 -320 { lab=ibias}
 N 660 -550 700 -550 { lab=out}
 N 620 -550 660 -550 { lab=out}
 N 80 -120 80 -100 { lab=avss}
@@ -58,13 +58,14 @@ N 220 -420 220 -400 { lab=avss}
 N 100 -760 100 -480 { lab=im}
 N 100 -760 260 -760 { lab=im}
 N 60 -400 100 -400 { lab=avss}
+N 360 -420 400 -420 { lab=avss}
 C {devices/title.sym} 160 -40 0 0 {name=l6 author="Luis Henrique Rodovalho"}
-C {lpopampb.sym} 400 -320 0 0 {name=Xdut}
+C {lpopamp.sym} 400 -300 0 0 {name=Xdut}
 C {devices/lab_pin.sym} 360 -460 0 0 {name=lavdd1 sig_type=std_logic lab=avdd}
 C {devices/lab_pin.sym} 360 -440 0 0 {name=lavss1 sig_type=std_logic lab=avss}
-C {devices/lab_pin.sym} 360 -400 0 0 {name=len1 sig_type=std_logic lab=en}
-C {devices/lab_pin.sym} 360 -380 0 0 {name=lenb1 sig_type=std_logic lab=enb}
-C {devices/lab_pin.sym} 360 -340 0 0 {name=libias1 sig_type=std_logic lab=ibias}
+C {devices/lab_pin.sym} 360 -380 0 0 {name=len1 sig_type=std_logic lab=en}
+C {devices/lab_pin.sym} 360 -360 0 0 {name=lenb1 sig_type=std_logic lab=enb}
+C {devices/lab_pin.sym} 360 -320 0 0 {name=libias1 sig_type=std_logic lab=ibias}
 C {devices/lab_pin.sym} 700 -550 0 1 {name=lout0 sig_type=std_logic lab=out}
 C {devices/vsource.sym} 80 -150 0 0 {name=v_avss value=xavss}
 C {devices/vsource.sym} 240 -150 0 0 {name=v_avdd value="dc \{xavdd\} ac \{xavdd_ac\}"}
@@ -95,13 +96,11 @@ C {devices/lab_pin.sym} 560 -100 0 1 {name=lavss4 sig_type=std_logic lab=avss}
 C {devices/lab_pin.sym} 320 -580 0 0 {name=lim_ sig_type=std_logic lab=im_}
 C {devices/code_shown.sym} 80 -1010 0 0 {name=header only_toplevel=false value="
 * Include SkyWater sky130 device models
-.lib "/usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
-.param mc_mm_switch=0
+.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
 .temp 25
 "
 }
-C {devices/code_shown.sym} 1000 -1010 0 0 {name=control only_toplevel=false value="
-.option gmin=1e-12
+C {devices/code_shown.sym} 1100 -1010 0 0 {name=control only_toplevel=false value="
 .option rshunt=1e12
 .control
   * differential input
@@ -110,21 +109,21 @@ C {devices/code_shown.sym} 1000 -1010 0 0 {name=control only_toplevel=false valu
   alter v_avdd ac=0
 
   op
-  ac dec 10 10m 10G
+  ac dec 100 10m 10G
 
   * common-mode input
   alter v_ip   ac=1
   alter v_im   ac=1
   alter v_avdd ac=0
 
-  ac dec 10 10m 10G
+  ac dec 100 10m 10G
 
   * power supply
   alter v_ip   ac=0
   alter v_im   ac=0
   alter v_avdd ac=1
 
-  ac dec 10 10m 10G
+  ac dec 100 10m 10G
 
   let idd = op.i(v_avdd) 
   let av = db(ac1.out)
@@ -173,3 +172,4 @@ C {devices/code_shown.sym} 780 -1010 0 0 {name=params only_toplevel=false value=
 C {devices/vsource.sym} 100 -450 0 0 {name=v_im value="dc \{xavdd/2\}"}
 C {devices/vsource.sym} 220 -450 0 0 {name=v_ip value="dc \{xavdd/2\}"}
 C {devices/lab_pin.sym} 60 -400 0 0 {name=lavss3 sig_type=std_logic lab=avss}
+C {devices/lab_pin.sym} 360 -420 0 0 {name=lavss5 sig_type=std_logic lab=avss}

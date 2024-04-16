@@ -269,11 +269,11 @@ N 620 -940 1620 -940 { lab=zpm}
 N 1620 -220 1620 -160 { lab=znm}
 N 1620 -420 1620 -220 { lab=znm}
 C {devices/title.sym} 160 -40 0 0 {name=l6 author="Luis Henrique Rodovalho"}
-C {devices/iopin.sym} 50 -670 2 1 {name=pavdd lab=avdd}
-C {devices/iopin.sym} 50 -640 2 1 {name=pavss lab=avss}
-C {devices/iopin.sym} 50 -780 2 1 {name=pip lab=ip}
-C {devices/iopin.sym} 50 -750 2 1 {name=pim lab=im}
-C {devices/iopin.sym} 50 -720 2 1 {name=po lab=o}
+C {devices/iopin.sym} 50 -690 2 1 {name=pavdd lab=avdd}
+C {devices/iopin.sym} 50 -660 2 1 {name=pavss lab=avss}
+C {devices/iopin.sym} 50 -790 2 1 {name=pip lab=ip}
+C {devices/iopin.sym} 50 -760 2 1 {name=pim lab=im}
+C {devices/iopin.sym} 50 -730 2 1 {name=po lab=o}
 C {n8_1.sym} 260 -1000 0 1 {name=x00b[1:0]}
 C {n1_4.sym} 220 -160 0 0 {name=x02c[1:0]}
 C {p8_1.sym} 260 -360 0 1 {name=x02b[1:0]}
@@ -375,3 +375,4 @@ C {p4_1.sym} 1500 -1200 0 0 {name=x20a[1:0]}
 C {devices/lab_pin.sym} 1460 -1200 2 1 {name=l26 sig_type=std_logic lab=en}
 C {devices/iopin.sym} 50 -450 2 1 {name=pypp1 lab=xp}
 C {devices/iopin.sym} 50 -280 2 1 {name=pynp1 lab=xn}
+C {devices/iopin.sym} 50 -630 2 1 {name=pvsub lab=vsub}

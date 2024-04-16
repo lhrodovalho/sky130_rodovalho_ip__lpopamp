@@ -7,9 +7,9 @@ E {}
 N 540 -550 580 -550 { lab=out}
 N 320 -460 360 -460 { lab=avdd}
 N 320 -440 360 -440 { lab=avss}
-N 320 -400 360 -400 { lab=en}
-N 320 -380 360 -380 { lab=enb}
-N 320 -340 360 -340 { lab=ibias}
+N 320 -380 360 -380 { lab=en}
+N 320 -360 360 -360 { lab=enb}
+N 320 -320 360 -320 { lab=ibias}
 N 780 -550 820 -550 { lab=out}
 N 580 -550 620 -550 { lab=out}
 N 80 -120 80 -100 { lab=avss}
@@ -65,13 +65,14 @@ N 1000 -340 1240 -340 { lab=cm}
 N 1000 -440 1320 -440 { lab=in}
 N 320 -520 360 -520 { lab=ip}
 N 240 -100 400 -100 { lab=avss}
+N 320 -420 360 -420 { lab=avss}
 C {devices/title.sym} 160 -40 0 0 {name=l6 author="Luis Henrique Rodovalho"}
-C {lpopampa.sym} 360 -320 0 0 {name=Xdut}
+C {lpopamp.sym} 360 -300 0 0 {name=Xdut}
 C {devices/lab_pin.sym} 320 -460 0 0 {name=lavdd1 sig_type=std_logic lab=avdd}
 C {devices/lab_pin.sym} 320 -440 0 0 {name=lavss1 sig_type=std_logic lab=avss}
-C {devices/lab_pin.sym} 320 -400 0 0 {name=len1 sig_type=std_logic lab=en}
-C {devices/lab_pin.sym} 320 -380 0 0 {name=lenb1 sig_type=std_logic lab=enb}
-C {devices/lab_pin.sym} 320 -340 0 0 {name=libias1 sig_type=std_logic lab=ibias}
+C {devices/lab_pin.sym} 320 -380 0 0 {name=len1 sig_type=std_logic lab=en}
+C {devices/lab_pin.sym} 320 -360 0 0 {name=lenb1 sig_type=std_logic lab=enb}
+C {devices/lab_pin.sym} 320 -320 0 0 {name=libias1 sig_type=std_logic lab=ibias}
 C {devices/lab_pin.sym} 820 -550 0 1 {name=lout0 sig_type=std_logic lab=out}
 C {devices/vsource.sym} 80 -150 0 0 {name=v_avss value=xavss}
 C {devices/vsource.sym} 240 -150 0 0 {name=v_avdd value="dc \{xavdd\}"}
@@ -108,13 +109,12 @@ C {devices/lab_pin.sym} 480 -200 0 1 {name=lcm0 sig_type=std_logic lab=cm}
 C {devices/lab_pin.sym} 480 -100 0 1 {name=lavss4 sig_type=std_logic lab=avss}
 C {devices/code_shown.sym} 80 -1010 0 0 {name=header only_toplevel=false value="
 * Include SkyWater sky130 device models
-.lib "/usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.lib /usr/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
 .param mc_mm_switch=0
 "
 }
-C {devices/code_shown.sym} 900 -1010 0 0 {name=control only_toplevel=false value="
-.option gmin=1e-10
-.option rshunt=1e10
+C {devices/code_shown.sym} 920 -1010 0 0 {name=control only_toplevel=false value="
+.option rshunt=1e12
 .param xdc_initial = \{-0.2m\}
 .param xdc_final   = \{ 0.2m\}
 .param xdc_step    = \{(xdc_final-xdc_initial)/1000\}
@@ -128,7 +128,7 @@ C {devices/code_shown.sym} 900 -1010 0 0 {name=control only_toplevel=false value
   plot av vs vo
 .endc
 "}
-C {devices/code_shown.sym} 620 -1010 0 0 {name=params only_toplevel=false value="
+C {devices/code_shown.sym} 640 -1010 0 0 {name=params only_toplevel=false value="
 .param xavdd  = 3.3
 .param xavss  = 0
 .param xcm    = 1.65
@@ -152,3 +152,4 @@ C {devices/code_shown.sym} 620 -1010 0 0 {name=params only_toplevel=false value=
 .param xcl    = 1T
 .param xrl    = 1T
 "}
+C {devices/lab_pin.sym} 320 -420 0 0 {name=lavss3 sig_type=std_logic lab=avss}

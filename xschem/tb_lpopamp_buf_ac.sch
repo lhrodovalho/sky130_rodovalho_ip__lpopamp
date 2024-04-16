@@ -11,9 +11,9 @@ N 580 -680 580 -550 { lab=out}
 N 540 -550 580 -550 { lab=out}
 N 320 -460 360 -460 { lab=avdd}
 N 320 -440 360 -440 { lab=avss}
-N 320 -400 360 -400 { lab=en}
-N 320 -380 360 -380 { lab=enb}
-N 320 -340 360 -340 { lab=ibias}
+N 320 -380 360 -380 { lab=en}
+N 320 -360 360 -360 { lab=enb}
+N 320 -320 360 -320 { lab=ibias}
 N 780 -550 820 -550 { lab=out}
 N 580 -550 620 -550 { lab=out}
 N 80 -120 80 -100 { lab=avss}
@@ -51,13 +51,14 @@ N 620 -550 780 -550 { lab=out}
 N 780 -550 780 -520 { lab=out}
 N 780 -440 820 -440 { lab=out_}
 N 320 -520 360 -520 { lab=in}
+N 320 -420 360 -420 { lab=avss}
 C {devices/title.sym} 160 -40 0 0 {name=l6 author="Luis Henrique Rodovalho"}
-C {lpopampa.sym} 360 -320 0 0 {name=Xdut}
+C {lpopamp.sym} 360 -300 0 0 {name=Xdut}
 C {devices/lab_pin.sym} 320 -460 0 0 {name=lavdd1 sig_type=std_logic lab=avdd}
 C {devices/lab_pin.sym} 320 -440 0 0 {name=lavss1 sig_type=std_logic lab=avss}
-C {devices/lab_pin.sym} 320 -400 0 0 {name=len1 sig_type=std_logic lab=en}
-C {devices/lab_pin.sym} 320 -380 0 0 {name=lenb1 sig_type=std_logic lab=enb}
-C {devices/lab_pin.sym} 320 -340 0 0 {name=libias1 sig_type=std_logic lab=ibias}
+C {devices/lab_pin.sym} 320 -380 0 0 {name=len1 sig_type=std_logic lab=en}
+C {devices/lab_pin.sym} 320 -360 0 0 {name=lenb1 sig_type=std_logic lab=enb}
+C {devices/lab_pin.sym} 320 -320 0 0 {name=libias1 sig_type=std_logic lab=ibias}
 C {devices/lab_pin.sym} 820 -550 0 1 {name=lout0 sig_type=std_logic lab=out}
 C {devices/vsource.sym} 80 -150 0 0 {name=v_avss value=xavss}
 C {devices/vsource.sym} 240 -150 0 0 {name=v_avdd value="dc \{xavdd\} ac \{xavdd_ac\}"}
@@ -86,13 +87,11 @@ m=1}
 C {devices/lab_pin.sym} 820 -440 0 1 {name=lout_ sig_type=std_logic lab=out_}
 C {devices/code_shown.sym} 80 -1030 0 0 {name=header only_toplevel=false value="
 * Include SkyWater sky130 device models
-.lib "/usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
-.param mc_mm_switch=0
+.lib /usr/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
 .temp 25
 "
 }
 C {devices/code_shown.sym} 960 -1030 0 0 {name=control only_toplevel=false value="
-.option gmin=1E-12
 .option rshunt=1E12
 .control
   ac dec 100 1k 1G
@@ -117,3 +116,4 @@ C {devices/code_shown.sym} 640 -1030 0 0 {name=params only_toplevel=false value=
 .param xrl    = 5k
 "}
 C {devices/lab_pin.sym} 320 -520 0 0 {name=lin1 sig_type=std_logic lab=in}
+C {devices/lab_pin.sym} 320 -420 0 0 {name=lavss3 sig_type=std_logic lab=avss}
