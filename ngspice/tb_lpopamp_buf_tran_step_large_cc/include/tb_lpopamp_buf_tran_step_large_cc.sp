@@ -55,6 +55,7 @@ RL out out_ 'xrl' m=1
 .param xtstep  = {xper/100}
 .tran {xtstep} {xtend} {xtstart}
 
+.save v(in) v(out)
 .control
   run
   plot in out
