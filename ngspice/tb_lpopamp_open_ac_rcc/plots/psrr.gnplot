@@ -1,0 +1,35 @@
+set xlabel 'Frequency (Hz)'
+set ylabel 'PSRR (dB)'
+set logscale x
+set format x "10^{%L}"
+set grid
+set key off
+set term png
+set output 'psrr.png'
+set datafile separator ','
+plot \
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv0' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv1' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv2' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv3' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv4' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv5' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv6' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv7' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv8' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv9' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv10' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv11' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv12' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv13' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv14' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv15' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv16' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv17' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv18' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv19' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv20' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv21' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv22' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv23' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_psrr.csv24' with lines lt rgb 'blue',\

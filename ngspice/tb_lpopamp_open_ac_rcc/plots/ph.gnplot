@@ -1,0 +1,35 @@
+set xlabel 'Frequency (Hz)'
+set ylabel 'Phase (°)'
+set logscale x
+set format x "10^{%L}"
+set grid
+set key off
+set term png
+set output 'ph.png'
+set datafile separator ','
+plot \
+'../data/tb_lpopamp_open_ac_rcc_ph.csv0' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv1' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv2' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv3' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv4' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv5' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv6' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv7' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv8' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv9' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv10' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv11' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv12' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv13' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv14' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv15' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv16' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv17' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv18' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv19' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv20' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv21' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv22' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv23' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_ph.csv24' with lines lt rgb 'blue',\

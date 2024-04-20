@@ -1,0 +1,35 @@
+set xlabel 'Frequency (Hz)'
+set ylabel 'Voltage gain (dB)'
+set logscale x
+set format x "10^{%L}"
+set grid
+set key off
+set term png
+set output 'av.png'
+set datafile separator ','
+plot \
+'../data/tb_lpopamp_open_ac_rcc_av.csv0' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv1' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv2' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv3' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv4' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv5' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv6' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv7' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv8' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv9' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv10' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv11' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv12' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv13' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv14' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv15' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv16' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv17' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv18' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv19' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv20' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv21' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv22' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv23' with lines lt rgb 'blue',\
+'../data/tb_lpopamp_open_ac_rcc_av.csv24' with lines lt rgb 'blue',\
