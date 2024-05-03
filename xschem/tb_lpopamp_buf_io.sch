@@ -53,7 +53,7 @@ N 780 -550 780 -520 { lab=out}
 N 780 -520 780 -460 { lab=out}
 N 320 -420 360 -420 { lab=avss}
 C {devices/title.sym} 160 -40 0 0 {name=l6 author="Luis Henrique Rodovalho"}
-C {lpopamp.sym} 360 -300 0 0 {name=Xdut}
+C {sky130_rodovalho_ip__lpopamp.sym} 360 -300 0 0 {name=Xdut}
 C {devices/lab_pin.sym} 320 -460 0 0 {name=lavdd1 sig_type=std_logic lab=avdd}
 C {devices/lab_pin.sym} 320 -440 0 0 {name=lavss1 sig_type=std_logic lab=avss}
 C {devices/lab_pin.sym} 320 -380 0 0 {name=len1 sig_type=std_logic lab=en}
