@@ -60,7 +60,7 @@ N 100 -760 260 -760 { lab=im}
 N 60 -400 100 -400 { lab=avss}
 N 360 -420 400 -420 { lab=avss}
 C {devices/title.sym} 160 -40 0 0 {name=l6 author="Luis Henrique Rodovalho"}
-C {lpopamp.sym} 400 -300 0 0 {name=Xdut}
+C {sky130_rodovalho_ip__lpopamp.sym} 400 -300 0 0 {name=Xdut}
 C {devices/lab_pin.sym} 360 -460 0 0 {name=lavdd1 sig_type=std_logic lab=avdd}
 C {devices/lab_pin.sym} 360 -440 0 0 {name=lavss1 sig_type=std_logic lab=avss}
 C {devices/lab_pin.sym} 360 -380 0 0 {name=len1 sig_type=std_logic lab=en}

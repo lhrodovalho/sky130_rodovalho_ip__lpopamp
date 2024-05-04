@@ -15,9 +15,9 @@ C {devices/iopin.sym} 50 -610 2 1 {name=pena lab=en}
 C {devices/iopin.sym} 50 -580 2 1 {name=penb lab=enb}
 C {devices/iopin.sym} 50 -470 2 1 {name=pvsub lab=vsub}
 C {devices/code.sym} 600 -480 0 0 {name=netlist only_toplevel=false value="
-* NGSPICE file created from lpopamp.ext - technology: sky130A
+* NGSPICE file created from sky130_rodovalho_ip__lpopamp.ext - technology: sky130A
 
-*.subckt lpopamp im o ib vsub avss avdd enb en ip
+*.subckt sky130_rodovalho_ip__lpopamp im o ib vsub avss avdd enb en ip
 X0 bpb bpb slice0.bpa_ avdd sky130_fd_pr__pfet_g5v0d10v5 ad=1.25 pd=5.5 as=1.25 ps=5.5 w=5 l=1
 X1 a_9400_2600# en slice1.bna_ avss sky130_fd_pr__nfet_g5v0d10v5 ad=1.75 pd=7.5 as=1.75 ps=7.5 w=7 l=1
 X2 a_58300_4300# znp a_58000_4300# avss sky130_fd_pr__nfet_g5v0d10v5 ad=1.75 pd=7.5 as=1.75 ps=7.5 w=7 l=1
